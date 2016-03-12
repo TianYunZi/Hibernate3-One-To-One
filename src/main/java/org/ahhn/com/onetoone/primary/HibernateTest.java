@@ -1,4 +1,4 @@
-package org.ahhn.com.onetoone.foreign;
+package org.ahhn.com.onetoone.primary;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

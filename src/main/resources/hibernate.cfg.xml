@@ -14,7 +14,7 @@
 
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
-        <property name="hbm2ddl.auto">update</property>
+        <property name="hbm2ddl.auto">create</property>
 
         <!--设置Hibernate事务的隔离级别-->
         <property name="connection.isolation">2</property>
@@ -37,8 +37,10 @@
         <!-- 设定对数据库进行批量删除，批量更新和批量插入的时候的批次大小，对MySQL无效-->
         <property name="hibernate.jdbc.batch_size">30</property>
 
-        <mapping resource="org.ahhn.com.onetoone.foreign/Manager.hbm.xml"/>
-        <mapping resource="org.ahhn.com.onetoone.foreign/Department.hbm.xml"/>
+        <!--<mapping resource="org.ahhn.com.onetoone.primary/Manager.hbm.xml"/>-->
+        <!--<mapping resource="org.ahhn.com.onetoone.primary/Department.hbm.xml"/>-->
+        <mapping resource="org.ahhn.com.manytomany/Catagory.hbm.xml"/>
+        <mapping resource="org.ahhn.com.manytomany/Item.hbm.xml"/>
 
     </session-factory>
 </hibernate-configuration>
